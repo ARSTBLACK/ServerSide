@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 6 - Employee Query</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Employee Query</h1>
+    <form id="searchForm">
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <select name="department" id="department">
+                <option value="">All</option>
+                <option value="HR">HR</option>
+                <option value="IT">Engineering</option>
+                <option value="Sales">Marketing</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="position">Position:</label>
+            <select name="position" id="position">
+                <option value="">All</option>
+                <option value="Developer">Manager</option>
+                <option value="Manager">Developer</option>
+                <option value="Sales Lead">Designer</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="minSalary">Min Salary:</label>
+            <input type="number" name="minSalary" id="minSalary">
+        </div>
+        <div class="form-group">
+            <label for="maxSalary">Max Salary:</label>
+            <input type="number" name="maxSalary" id="maxSalary">
+        </div>
+        <button type="submit">Search</button>
+    </form>
+
+    <table id="resultsTable" class="display">
+        <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Position</th>
+            <th>Hire Date</th>
+            <th>Salary</th>
+        </tr>
+        </thead>
+        <tbody id="resultsBody">
+        <!-- Results will be injected here by JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="/scripts.js"></script>
+</body>
+</html>
